@@ -1,0 +1,47 @@
+.note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  font-size: 1em;
+}
+.note-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.19em;
+  color: var(--primary, #1976d2);
+  font-weight: 600;
+  margin-bottom: .41em;
+}
+.note-form input,
+.note-form textarea {
+  font-size: 1em;
+  padding: 0.47em 0.8em;
+  border-radius: 7px;
+  border: 1px solid var(--border-color, #e9ecef);
+  margin-top: 0.2em;
+}
+.note-form textarea {
+  min-height: 95px;
+  resize: vertical;
+  font-family: inherit;
+}
+.btn-form-cancel {
+  border: none;
+  background: #eee;
+  color: #404040;
+  border-radius: 6px;
+  padding: 0.43em 1em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+}
+.btn-form-cancel:hover { background: #ddd; }
+.form-error {
+  color: #be2626;
+  margin-top: 0.5em;
+  background: #ffeaea;
+  padding: 0.4em 0.7em;
+  border-radius: 6px;
+  text-align: left;
+  font-size: .98em;
+}

@@ -1,0 +1,26 @@
+.notes-search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, #e9ecef);
+  background: var(--bg-secondary, #f8f9fa);
+  padding: 0.2em 0.8em;
+  margin: 0 0 .5em 0;
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+}
+.notes-search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 1.1em;
+  flex: 1;
+  padding: 0.5em 0;
+  color: var(--text-primary, #282c34);
+}
+.search-icon {
+  color: var(--primary, #1976d2);
+  font-size: 1.1em;
+  margin-left: 0.5em;
+}

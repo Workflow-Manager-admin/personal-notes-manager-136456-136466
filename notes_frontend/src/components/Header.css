@@ -1,0 +1,60 @@
+.notes-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary, #f8f9fa);
+  border-bottom: 1px solid var(--border-color, #e9ecef);
+  height: 58px;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding: 0 2.4rem 0 1.4rem;
+  position: sticky;
+  top: 0;
+  z-index: 30;
+}
+
+.app-title {
+  font-size: 1.42em;
+  font-family: 'Segoe UI', sans-serif;
+  letter-spacing: 0.03em;
+  font-weight: 700;
+}
+
+.app-title .primary {
+  color: var(--primary, #1976d2);
+}
+
+.app-title .accent {
+  color: var(--accent, #ff9800);
+  margin-left: 0.5em;
+}
+
+.user-block {
+  display: flex;
+  align-items: center;
+  gap: 0.7em;
+}
+.username {
+  font-size: 1em;
+  color: var(--primary, #1976d2);
+  font-weight: 600;
+}
+.logout-btn {
+  border: none;
+  background: var(--accent, #ff9800);
+  color: #fff;
+  padding: 0.35em 1em;
+  border-radius: 7px;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.logout-btn:hover { background: #dfa649; }
+
+@media (max-width: 700px) {
+  .notes-header-bar {
+    padding-left: 0.35em;
+    font-size: 1em;
+  }
+}

@@ -1,0 +1,48 @@
+.notes-sidebar {
+  background: var(--bg-secondary, #f8f9fa);
+  color: var(--text-primary, #282c34);
+  width: 220px;
+  min-width: 100px;
+  padding: 1rem 0.5rem;
+  border-right: 1px solid var(--border-color, #e9ecef);
+  height: 100vh;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.sidebar-header {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.5rem 0 1rem 0.3rem;
+  color: var(--primary, #1976d2);
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+}
+.sidebar-item {
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-primary, #282c34);
+  transition: background 0.2s;
+  margin-bottom: 0.2rem;
+}
+.sidebar-item:hover, .sidebar-item-active {
+  background: var(--accent, #ff9800);
+  color: #fff;
+}
+
+@media (max-width:850px) {
+  .notes-sidebar {
+    width: 60px;
+    min-width: 60px;
+    padding: 0.5rem 0.1rem;
+    font-size: 0.95em;
+  }
+  .sidebar-header {
+    font-size: 1em;
+    flex-direction: column;
+  }
+}

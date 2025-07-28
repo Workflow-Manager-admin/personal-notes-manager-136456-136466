@@ -1,0 +1,42 @@
+.modal-overlay {
+  position: fixed;
+  z-index: 99;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-content {
+  background: var(--bg-primary, #fff);
+  border-radius: 12px;
+  box-shadow: 0 4px 32px 5px rgba(64,104,180,0.13);
+  min-width: 330px;
+  max-width: 98vw;
+  min-height: 180px;
+  padding: 1.6em 1.6em 1.5em 1.6em;
+  animation: modal-in 0.17s;
+  position: relative;
+}
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.13em;
+  font-weight: 600;
+  margin-bottom: 1em;
+  border-bottom: 1px solid var(--border-color, #e9ecef);
+  padding-bottom: 0.55em;
+}
+.modal-close-btn {
+  background: none;
+  border: none;
+  font-size: 1.29em;
+  font-weight: 800;
+  color: #C44519;
+  cursor: pointer;
+}
+@keyframes modal-in {
+  from { transform: scale(0.90); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}

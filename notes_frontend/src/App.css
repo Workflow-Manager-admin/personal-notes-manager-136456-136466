@@ -1,24 +1,87 @@
 /* CSS Variables for Theme Management */
 :root {
-  /* Light theme colors */
+  --primary: #1976d2;
+  --secondary: #64b5f6;
+  --accent: #ff9800;
+
   --bg-primary: #ffffff;
   --bg-secondary: #f8f9fa;
   --text-primary: #282c34;
-  --text-secondary: #61dafb;
+  --text-secondary: #8b9199;
   --border-color: #e9ecef;
-  --button-bg: #007bff;
+  --button-bg: var(--primary, #1976d2);
   --button-text: #ffffff;
 }
 
 [data-theme="dark"] {
-  /* Dark theme colors */
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #282c34;
+  --bg-primary: #181c20;
+  --bg-secondary: #242f3d;
   --text-primary: #ffffff;
-  --text-secondary: #61dafb;
-  --border-color: #404040;
+  --text-secondary: #bafffb;
+  --border-color: #3f3f4a;
   --button-bg: #0056b3;
   --button-text: #ffffff;
+  --accent: #ff9800;
+}
+
+.notes-root {
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+
+  /* to avoid scroll bar shudder due to sticky header */
+  box-sizing: border-box;
+}
+.notes-main-container {
+  display: flex;
+  flex-direction: row;
+  min-height: 94vh;
+  width: 100%;
+  background: var(--bg-primary);
+}
+
+.notes-center-content {
+  flex: 1;
+  padding: 2.3em 1em 1.9em 1.8em;
+  min-width: 0;
+  background: var(--bg-primary);
+  position: relative;
+}
+/* Main content responsive */
+@media (max-width: 850px) {
+  .notes-center-content { padding: 1.2em 0.3em 1.2em 0.7em; }
+  .notes-main-container { flex-direction: column; }
+}
+.main-header-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.9em;
+  gap: 0.7em;
+}
+
+.layout-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-left: 1em;
+}
+.layout-btn,
+.layout-btn-active {
+  background: none;
+  border: 1.5px solid var(--border-color, #e9ecef);
+  border-radius: 7px;
+  font-size: 1.18em;
+  color: var(--primary, #1976d2);
+  cursor: pointer;
+  margin-left: 0.22em;
+  padding: 0.23em 0.5em;
+  transition: background 0.15s, color 0.19s;
+}
+.layout-btn-active { background: var(--secondary, #64b5f6); color: #fff;}
+.add-note-btn {
+  margin-left: 0.8em;
 }
 
 .App {
